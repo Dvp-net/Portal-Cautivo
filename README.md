@@ -37,7 +37,7 @@
     }
     .logo{
       display:block; margin:6px auto 14px;
-      <img width="3508" height="2480" alt="logo-ism" src="https://github.com/user-attachments/assets/6d26282c-1e61-43a7-b16e-92afc3b4baae" />/* Si subiste el logo en la raíz con nombre "logo-ism.png", este src funciona */
+      /* Si subiste el logo en la raíz con nombre "logo-ism.png", este src funciona */
       width:100%; max-width:260px; height:auto; object-fit:contain;
     }
     h1{margin:.2rem 0 .25rem; font-size:1.55rem}
@@ -99,5 +99,4 @@
     })();
   </script>
 </body>
-
 </html>
