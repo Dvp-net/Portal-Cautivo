@@ -36,7 +36,9 @@
       filter:blur(6px);
     }
     .logo{
-      height:64px; margin:6px auto 14px; display:block; object-fit:contain;
+      display:block; margin:6px auto 14px;
+      /* Si subiste el logo en la raíz con nombre "logo-ism.png", este src funciona */
+      width:100%; max-width:260px; height:auto; object-fit:contain;
     }
     h1{margin:.2rem 0 .25rem; font-size:1.55rem}
     p{margin:.4rem 0; color:var(--muted)}
@@ -62,8 +64,9 @@
 </head>
 <body>
   <main class="card" role="main" aria-label="Conexión Exitosa">
-    <!-- REEMPLAZA el src por tu logo oficial si quieres -->
-    <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Check_green_icon.svg/120px-Check_green_icon.svg.png" alt="Grupo ISM" />
+    <!-- Logo ISM (archivo local del repo) -->
+    <img class="logo" src="./logo-ism.png" alt="Grupo ISM" />
+
     <div class="ok">✅</div>
     <h1>¡Conexión exitosa!</h1>
     <p>Ya estás conectado(a) al Wi-Fi de <b>Grupo ISM</b>.</p>
@@ -80,11 +83,12 @@
     </div>
 
     <p class="hint">Si no se abre, toca “Abrir en navegador” o vuelve a intentar con el otro botón.</p>
-    <div class="footer">© Grupo ISM — Mantente conectado. </div>
+    <div class="footer">© Grupo ISM — Mantente conectado.</div>
     <div class="ribbon" aria-hidden="true"></div>
   </main>
+
   <script>
-    // Si el portal se abre dentro del "Captive Network Assistant", forzamos que los enlaces se abran fuera
+    // Si el portal se abre dentro del "Captive Network Assistant", intentamos cerrar la ventana embebida
     (function(){
       const isMiniBrowser = /CaptiveNetwork|CNA|MiniBrowser|wv/.test(navigator.userAgent);
       if(isMiniBrowser){
