@@ -53,11 +53,9 @@
   <main class="card">
     <!-- LOGO Grupo ISM -->
     <div class="brand" aria-label="Logo Grupo ISM">
-      <picture>
-        <source srcset="/portal-exito/assets/logo-ism.svg?v=1" type="image/svg+xml">
-        <img src="/portal-exito/logo-ism.png?v=1" alt="Grupo ISM">
-      </picture>
-    </div>
+  <img class="logo" src="/Portal-Cautivo/logo-ism.png?v=2" alt="Grupo ISM">
+</div>
+
 
     <div class="ok">✅</div>
     <h1>¡Conexión exitosa!</h1>
